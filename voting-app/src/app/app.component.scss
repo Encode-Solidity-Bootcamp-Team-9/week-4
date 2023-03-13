@@ -1,0 +1,142 @@
+p {
+  text-align: justify;
+}
+
+mat-toolbar {
+  padding: 8px 16px;
+  height: 64px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--v-background-color);
+  color: white;
+  .container {
+    display: flex;
+    align-items: center;
+    .toolbar-content {
+      flex: 1;
+      .toolbar-caption {
+        font-size: 16px;
+        white-space: pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .buttons {
+      button {
+        background-color: var(--v-primary-color) !important;
+      }
+    }
+  }
+}
+
+.snapshot {
+  text-align: right;
+}
+.vote-result {
+  margin: 16px 0px;
+  &.winner {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .detail {
+    display: flex;
+    .voting-option {
+      flex: 1;
+    }
+  }
+}
+
+.delegate-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  input {
+    min-width: 320px;
+    min-height: 36px;
+    margin: 16px 0px;
+  }
+  button {
+    min-width: 216px;
+    color: white !important;
+    // background-color: var(--v-primary-color);
+  }
+}
+
+.reset-form {
+  display: flex;
+  justify-content: center;
+  button {
+    margin: 16px 0px;
+    min-width: 300px;
+    background-color: var(--v-primary-color);
+  }
+}
+
+.vote-form,
+.mint-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    min-width: 60px;
+    margin-right: 16px;
+    min-height: 36px;
+  }
+  div {
+    font-size: 16px;
+    color: var(--v-primary-color);
+    margin-right: 16px;
+  }
+  button {
+    min-width: 216px;
+    color: white !important;
+    // background-color: var(--v-primary-color);
+  }
+}
+
+.timeline-container.votes {
+  margin-bottom: 32px;
+  .timeline-content {
+    & > div {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+mat-spinner {
+  margin-left: 8px;
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.connect-wallet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0px;
+}
+
+.w-70px {
+  width: 70px !important;
+}
+
+.w-100px {
+  width: 100px !important;
+}
+
+.w-400px {
+  width: 400px;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+table {
+  border-radius: 12px !important;
+  border: none !important;
+  overflow: hidden !important;
+}

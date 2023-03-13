@@ -1,0 +1,228 @@
+@use "sass:map";
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+$container-max-widths: (
+  xs: 312px,
+  sm: 468px,
+  md: 744px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1320px,
+);
+
+$container-fluid-margin: (
+  xs: 4px,
+  sm: 6px,
+  md: 12px,
+  lg: 32px,
+  xl: 40px,
+  xxl: 60px,
+);
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+  @each $breakpoint, $container-width in $container-max-widths {
+    @media (min-width: $container-width) {
+      max-width: calc(
+        100vw - (#{map.get($container-fluid-margin, $breakpoint)} * 2)
+      );
+    }
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1320px;
+  }
+}
+
+:root {
+  --v-background-color: #191923;
+  --v-background-color-light: #232230;
+  --v-primary-color: #f4476d;
+  --v-color-light: #9897a7;
+}
+
+// Chips
+mat-chip-listbox {
+  & > div {
+    flex-direction: column !important;
+  }
+  mat-chip-option {
+    background: var(--v-background-color) !important;
+    &.mdc-evolution-chip--selected {
+      background: var(--v-primary-color) !important;
+    }
+    span.mdc-evolution-chip__cell {
+      display: flex;
+      flex: 1;
+      text-align: center;
+      button {
+        flex: 1;
+        display: flex;
+        span.mdc-evolution-chip__graphic {
+          flex: none;
+        }
+        span.mdc-evolution-chip__text-label {
+          flex: 1;
+          text-align: center;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+.mat-mdc-row {
+  background: var(--v-background-color) !important;
+  td {
+    color: white !important;
+    text-align: center;
+  }
+}
+
+.main-content {
+  background-color: var(--v-background-color-light);
+  min-height: calc(100vh - 64px);
+  box-sizing: border-box;
+  padding: 8px 0px;
+
+  .voting-title {
+    color: white;
+    h1 {
+      padding: 16px 8px;
+      border-bottom: 1px solid var(--v-color-light);
+      margin-bottom: 0px;
+      font-size: 36px;
+    }
+  }
+
+  .timeline-container {
+    color: white;
+    padding: 0px 16px;
+    display: flex;
+    &:last-child {
+      border-bottom: 1px solid var(--v-color-light);
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-left: 20px;
+      width: 40px;
+      border-left: 1px solid var(--v-color-light);
+      .hexagon {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 31px;
+        left: -20px;
+        color: white;
+        &::before {
+          content: "\2B22";
+          font-size: 50px;
+        }
+        div {
+          position: absolute;
+          color: var(--v-background-color-light);
+          font-size: 22px;
+        }
+      }
+    }
+    .timeline {
+      padding: 8px 0px;
+      flex: 1;
+
+      .timeline-title {
+        margin-top: 16px;
+        font-size: 28px;
+        text-transform: uppercase;
+        &.with-badge {
+          display: flex;
+          .badge {
+            font-size: 12px;
+            border-radius: 15px;
+            background: var(--v-color-light);
+            color: rgba(255, 255, 255, 0.8);
+            margin-left: 16px;
+            padding: 0px 8px;
+          }
+        }
+      }
+      .timeline-content {
+        margin-left: 16px;
+        font-size: 22px;
+        line-height: 1.4;
+        color: var(--v-color-light);
+        strong {
+          font-weight: normal;
+          color: rgba(255, 255, 255, 0.8);
+          text-decoration: underline;
+        }
+        em {
+          color: rgba(255, 255, 255, 0.8);
+          font-style: normal;
+          font-weight: 500;
+          span {
+            color: var(--v-primary-color);
+          }
+        }
+      }
+    }
+
+    &.done {
+      .timeline-step {
+        .hexagon {
+          color: #83c760;
+        }
+      }
+      .timeline {
+        .timeline-title {
+          color: #83c760;
+        }
+      }
+    }
+    &.error {
+      .timeline-step {
+        .hexagon {
+          color: var(--v-primary-color);
+        }
+      }
+
+      .timeline {
+        .timeline-title {
+          color: var(--v-primary-color);
+        }
+      }
+    }
+    &.waiting {
+      .timeline-step {
+        .hexagon {
+          color: var(--v-color-light);
+        }
+      }
+      .timeline {
+        .timeline-title {
+          color: var(--v-color-light);
+        }
+      }
+    }
+  }
+}
