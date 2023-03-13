@@ -8,16 +8,6 @@
 - Request voting tokens to be minted using the API
 - (bonus) Store a list of recent votes in the backend and display that on frontend
 
-## Participants
-
-- Raouf Hecham - 0x9e9ebd188ecaa8dcaf279380f71a48ab43ccffdf
-- Uros Kosic - 0x180b30Cca80073E5a2807CA3343dB96A2C0A6995, 0xd780e093642dB07E439B073132fB4074f1C381E3, 0xEBDcA17a395c735721FE4049806383259B1079FB
-- Rasim Muftiev - 0xf14288f3bbf103dbbf99ce82ac2f85ac578287a9
-- Thomas Durand - 0x2206d46b75b909a86a3bdc748dfb988637262128
-- Franck R - 0x90AA731eea0C9CbB2299b2ceb6674c5f54dFEBB0
-- Ewan Debove - 0x8eD7A43e549a9D814682ba180D2B38DAB74b1b60
-- Alice Chaverot - 0x8B99e144f35f85692866dc10dd6d38D4A731a816
-
 ## Basic information
 
 Dapp url: https://team9-voting.herokuapp.com/
