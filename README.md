@@ -331,7 +331,7 @@ Force reset is an operation that can not be performed through frontend, just wit
 
 The function emits `ForceResetEvent` event. Backend appliation listenes for this event, and clears the voters cache when it consumes it. In this way we achieved that frontend application shows correct state of the votes in the ballot.
 
-## Interactions #1 - Ewan Debove
+## Interactions #1
 
 | Transaction type | Delegate                                                                                                                                                                |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -369,7 +369,7 @@ The function emits `ForceResetEvent` event. Backend appliation listenes for this
 | decoded input    | -                                                                                                                                                                       |
 | decoded output   | -                                                                                                                                                                       |
 
-## Interactions #2 - Raouf Hecham
+## Interactions #2
 
 | Transaction type | Mint                                                                                                                                                                    |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -407,7 +407,7 @@ The function emits `ForceResetEvent` event. Backend appliation listenes for this
 | decoded input    | -                                                                                                                                                                       |
 | decoded output   | -                                                                                                                                                                       |
 
-## Interactions #3 - Franck R
+## Interactions #3
 
 | Transaction type |       Mint                                                                                                                                   |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -446,7 +446,7 @@ The function emits `ForceResetEvent` event. Backend appliation listenes for this
 | decoded input    | -                                                          |
 | decoded output   | -                                                                                                                                                                       |
 
-## Interactions #4 - Rasim Muftiev
+## Interactions #4
 
 | Transaction type |       Mint     |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -486,7 +486,7 @@ The function emits `ForceResetEvent` event. Backend appliation listenes for this
 | decoded input    | -                 |
 | decoded output   | -                 |
 
-## Interactions #5 - Alice Chaverot
+## Interactions #5
 
 | Transaction type |          Mint                                                                                                                                |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -526,7 +526,7 @@ The function emits `ForceResetEvent` event. Backend appliation listenes for this
 | decoded input    | -                                                          |
 | decoded output   | -                                                                                                                                                                       |
 
-## Interactions 6 - Uros Kosic
+## Interactions 6
 
 | Transaction type | Token Contract deployment                                                                                                                                          |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
